@@ -1,0 +1,41 @@
+{
+  "slug": "watch-experience",
+  "locked": true,
+  "title": "Re-imagining Watch Experience on Big Screens",
+  "subtitle": "Leading CTV design for Jiohotstar to enhance viewer experience",
+  "hero": {
+    "src": "/assets/open-case-streaming-hero.png",
+    "alt": "Streaming television interface displayed on a teal design board"
+  },
+  "index": [
+    "Introduced Merchant Profile",
+    "Saved 40% settlement cost",
+    "54% more merchant retention",
+    "24% Less support calls"
+  ],
+  "body": [
+    {
+      "style": "normal",
+      "text": "Designing for big screens meant rethinking the viewer experience from the living room outward. The goal was to help people discover, choose, and return to the stories they love with greater ease and confidence."
+    },
+    {
+      "style": "normal",
+      "text": "I mapped the television journey across browsing, focused viewing, and quick re-entry moments. The resulting system created a clearer content hierarchy, a more generous viewing canvas, and predictable navigation that worked comfortably from a distance."
+    },
+    {
+      "style": "normal",
+      "text": "The work brought product, research, and engineering together around a single question: how can a streaming surface feel rich without asking the viewer to work too hard? Those lessons shaped the visual language, content rails, motion principles, and the detail level of every screen."
+    }
+  ],
+  "cards": [
+    {
+      "src": "/assets/open-case-research-board.png",
+      "alt": "Streaming experience research board"
+    },
+    {
+      "src": "/assets/open-case-research-board.png",
+      "alt": "Streaming experience system board"
+    }
+  ],
+  "closing": "The system gave the product a quieter, more intentional rhythm—keeping content discovery visible while preserving the joy of watching together."
+}

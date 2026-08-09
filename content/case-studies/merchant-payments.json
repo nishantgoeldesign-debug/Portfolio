@@ -1,0 +1,28 @@
+{
+  "slug": "merchant-payments",
+  "locked": true,
+  "title": "Building Merchant Payment Experience",
+  "subtitle": "Improving merchant experience and optimizing cost",
+  "hero": {
+    "src": "/assets/case-study-gpay-hero.png",
+    "alt": "Merchant payment dashboard on a smartphone"
+  },
+  "index": [
+    "Introduced Merchant Profile",
+    "Saved 40% settlement cost",
+    "54% more merchant retention",
+    "24% Less support calls"
+  ],
+  "body": [
+    {
+      "style": "normal",
+      "text": "Working for more than a year on Google Pay, a fintech app serving Indian merchants, has been quite interesting. The fintech industry has evolved significantly in terms of payment convenience for customers, from UPI to UPI Lite, in a short span of time."
+    },
+    {
+      "style": "fade",
+      "text": "However, we often overlook the impact of these advancements on the receiving end. How do things and technology affect merchants when it comes to receiving payments? How is the fintech industry helping them in various ways? Let's delve into that."
+    }
+  ],
+  "cards": [],
+  "closing": ""
+}
