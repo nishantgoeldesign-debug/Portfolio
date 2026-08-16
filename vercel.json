@@ -2,7 +2,7 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "framework": "vite",
   "installCommand": "npm install",
-  "buildCommand": "tinacms build && vite build",
+  "buildCommand": "vite build",
   "outputDirectory": "dist/client",
   "rewrites": [{ "source": "/((?!admin).*)", "destination": "/index.html" }]
 }
