@@ -186,16 +186,22 @@ export function App() {
   );
 }
 
-function CaseIndex({ items, basePath }) {
+function CaseIndex({ items, basePath, active = 0, onNavigate }) {
   return (
     <nav className="case-index" aria-label="Case study index">
       {items.map((label, index) => (
         <a
           key={`${label}-${index}`}
-          className={index === 0 ? "is-active" : undefined}
+          className={index === active ? "is-active" : undefined}
           href={basePath}
           onPointerEnter={() => tick()}
           onFocus={() => tick()}
+          onClick={(event) => {
+            if (onNavigate) {
+              event.preventDefault();
+              onNavigate(index);
+            }
+          }}
         >
           {label}
         </a>
@@ -205,8 +211,58 @@ function CaseIndex({ items, basePath }) {
 }
 
 function CaseStudy({ data }) {
-  const { slug, locked, title, subtitle, hero, index = [], body = [], cards = [], closing = "" } = data;
+  const { slug, locked, title, subtitle, hero, index = [], body = [], cards = [], closing = "", sections = [] } = data;
   const basePath = `#case/${slug}`;
+  const [activeSection, setActiveSection] = useState(0);
+
+  // Scroll-spy: highlight the index entry for whichever section is in view.
+  // Disabled on locked case studies (they are teasers — no section navigation).
+  useEffect(() => {
+    if (locked || !sections.length) return;
+    const els = sections
+      .map((_, i) => document.getElementById(`case-section-${i}`))
+      .filter(Boolean);
+    if (!els.length) return;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visible = entries
+          .filter((entry) => entry.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+        if (visible[0]) setActiveSection(Number(visible[0].target.dataset.index));
+      },
+      { rootMargin: "-30% 0px -60% 0px", threshold: [0, 0.25, 0.5, 1] }
+    );
+    els.forEach((el) => observer.observe(el));
+    return () => observer.disconnect();
+  }, [locked, sections.length, slug]);
+
+  const goToSection = (i) => {
+    const el = document.getElementById(`case-section-${i}`);
+    if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
+
+  // Locked case studies are teasers: lock scroll so nothing below the landing
+  // view can be reached. Restored when leaving the locked case.
+  useEffect(() => {
+    if (!locked) return;
+    const root = document.documentElement;
+    const body = document.body;
+    const prevRoot = root.style.overflow;
+    const prevBody = body.style.overflow;
+    const prevRootH = root.style.height;
+    const prevBodyH = body.style.height;
+    root.style.overflow = "hidden";
+    body.style.overflow = "hidden";
+    root.style.height = "100vh";
+    body.style.height = "100vh";
+    window.scrollTo(0, 0);
+    return () => {
+      root.style.overflow = prevRoot;
+      body.style.overflow = prevBody;
+      root.style.height = prevRootH;
+      body.style.height = prevBodyH;
+    };
+  }, [locked, slug]);
 
   return (
     <main className="site-shell">
@@ -227,7 +283,12 @@ function CaseStudy({ data }) {
           <figure className="case-hero">
             <img src={hero.src} alt={hero.alt} />
           </figure>
-          <CaseIndex items={index} basePath={basePath} />
+          <CaseIndex
+            items={index}
+            basePath={basePath}
+            active={activeSection}
+            onNavigate={!locked && sections.length > 0 ? goToSection : undefined}
+          />
         </div>
 
         <div className={`case-content${locked ? "" : " open-case-content"}`}>
@@ -237,11 +298,6 @@ function CaseStudy({ data }) {
                 {block.text}
               </p>
             ))}
-            {locked && (
-              <div className="locked-marker">
-                <img src="/assets/case-lock.svg" alt="" aria-hidden="true" />Locked
-              </div>
-            )}
           </div>
 
           {!locked && cards.length > 0 && (
@@ -257,7 +313,55 @@ function CaseStudy({ data }) {
 
           {!locked && closing && <p className="open-case-closing">{closing}</p>}
         </div>
+
+        {!locked && sections.length > 0 && (
+          <div className="case-sections">
+            {sections.map((section, i) => {
+              const media = section.media || {};
+              return (
+                <section className="case-section" id={`case-section-${i}`} data-index={i} key={i}>
+                  {section.title && <h2 className="section-title">{section.title}</h2>}
+
+                  {(media.video || media.image) && (
+                    <figure className="section-media">
+                      {media.video ? (
+                        <video src={media.video} autoPlay loop muted playsInline />
+                      ) : (
+                        <img src={media.image} alt={media.alt || ""} />
+                      )}
+                    </figure>
+                  )}
+
+                  {section.body && (
+                    <div className="section-body">
+                      {section.body.split(/\n{2,}/).map((para, p) => (
+                        <p key={p}>{para}</p>
+                      ))}
+                    </div>
+                  )}
+
+                  {section.stats && section.stats.length > 0 && (
+                    <div className="stat-box">
+                      {section.stats.map((stat, s) => (
+                        <div className="stat" key={s}>
+                          <span className="stat-value">{stat.value}</span>
+                          <span className="stat-label">{stat.label}</span>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                </section>
+              );
+            })}
+          </div>
+        )}
       </article>
+
+      {locked && (
+        <div className="locked-badge" role="status">
+          <img src="/assets/case-lock.svg" alt="" aria-hidden="true" />Locked
+        </div>
+      )}
     </main>
   );
 }

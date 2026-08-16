@@ -1,23 +1,19 @@
+// tina/config.ts
 import { defineConfig } from "tinacms";
-
-// TinaCMS content model for the portfolio.
-// - Content lives as JSON in /content (bundled by Vite at build time).
-// - Media uploads land in /public/assets (in-repo, versioned with the code).
-// Run the editor with `npm run cms`, then open http://localhost:5173/admin/index.html
-export default defineConfig({
+var config_default = defineConfig({
   branch: process.env.TINA_BRANCH || "main",
   // Local editing needs no cloud credentials; these are only used for Tina Cloud.
   clientId: process.env.NEXT_PUBLIC_TINA_CLIENT_ID || "",
   token: process.env.TINA_TOKEN || "",
   build: {
     outputFolder: "admin",
-    publicFolder: "public",
+    publicFolder: "public"
   },
   media: {
     tina: {
       mediaRoot: "assets",
-      publicFolder: "public",
-    },
+      publicFolder: "public"
+    }
   },
   schema: {
     collections: [
@@ -39,8 +35,8 @@ export default defineConfig({
             fields: [
               { type: "string", name: "title", label: "Section title" },
               { type: "string", name: "role", label: "Role" },
-              { type: "string", name: "companies", label: "Companies line" },
-            ],
+              { type: "string", name: "companies", label: "Companies line" }
+            ]
           },
           { type: "string", name: "canopyTitle", label: "Canopy title" },
           {
@@ -57,9 +53,9 @@ export default defineConfig({
                 type: "string",
                 name: "caseSlug",
                 label: "Links to case study (slug)",
-                description: "Must match a case study file name in content/case-studies (without .json).",
-              },
-            ],
+                description: "Must match a case study file name in content/case-studies (without .json)."
+              }
+            ]
           },
           { type: "string", name: "thoughtsTitle", label: "Thoughts title" },
           { type: "string", name: "thoughtsNote", label: "Thoughts note (shown when expanded)" },
@@ -71,8 +67,8 @@ export default defineConfig({
             ui: { itemProps: (item) => ({ label: item?.title || "Thought" }) },
             fields: [
               { type: "string", name: "title", label: "Title" },
-              { type: "image", name: "image", label: "Image" },
-            ],
+              { type: "image", name: "image", label: "Image" }
+            ]
           },
           {
             type: "object",
@@ -82,10 +78,10 @@ export default defineConfig({
             ui: { itemProps: (item) => ({ label: item?.label || "Link" }) },
             fields: [
               { type: "string", name: "label", label: "Label" },
-              { type: "string", name: "href", label: "URL" },
-            ],
-          },
-        ],
+              { type: "string", name: "href", label: "URL" }
+            ]
+          }
+        ]
       },
       {
         name: "caseStudy",
@@ -98,7 +94,7 @@ export default defineConfig({
             name: "slug",
             label: "Slug",
             required: true,
-            description: "URL slug. Should match this file's name (e.g. merchant-payments).",
+            description: "URL slug. Should match this file's name (e.g. merchant-payments)."
           },
           { type: "boolean", name: "locked", label: "Locked (teaser only)" },
           { type: "string", name: "title", label: "Title", isTitle: true, required: true },
@@ -109,15 +105,15 @@ export default defineConfig({
             label: "Hero image",
             fields: [
               { type: "image", name: "src", label: "Image" },
-              { type: "string", name: "alt", label: "Alt text" },
-            ],
+              { type: "string", name: "alt", label: "Alt text" }
+            ]
           },
           {
             type: "string",
             name: "index",
             label: "Outcome index",
             list: true,
-            description: "The right-side list of outcomes. The first item is highlighted.",
+            description: "The right-side list of outcomes. The first item is highlighted."
           },
           {
             type: "object",
@@ -132,11 +128,11 @@ export default defineConfig({
                 label: "Style",
                 options: [
                   { value: "normal", label: "Normal" },
-                  { value: "fade", label: "Fade out (teaser)" },
-                ],
+                  { value: "fade", label: "Fade out (teaser)" }
+                ]
               },
-              { type: "string", name: "text", label: "Text", ui: { component: "textarea" } },
-            ],
+              { type: "string", name: "text", label: "Text", ui: { component: "textarea" } }
+            ]
           },
           {
             type: "object",
@@ -146,8 +142,8 @@ export default defineConfig({
             ui: { itemProps: (item) => ({ label: item?.alt || "Board" }) },
             fields: [
               { type: "image", name: "src", label: "Image" },
-              { type: "string", name: "alt", label: "Alt text" },
-            ],
+              { type: "string", name: "alt", label: "Alt text" }
+            ]
           },
           { type: "string", name: "closing", label: "Closing line (open case only)", ui: { component: "textarea" } },
           {
@@ -168,10 +164,10 @@ export default defineConfig({
                     type: "string",
                     name: "video",
                     label: "Video path (optional)",
-                    description: "e.g. /assets/demo.mp4 — if set, plays instead of the image.",
+                    description: "e.g. /assets/demo.mp4 \u2014 if set, plays instead of the image."
                   },
-                  { type: "string", name: "alt", label: "Alt text" },
-                ],
+                  { type: "string", name: "alt", label: "Alt text" }
+                ]
               },
               { type: "string", name: "body", label: "Body text", ui: { component: "textarea" }, description: "Leave a blank line between paragraphs." },
               {
@@ -182,13 +178,16 @@ export default defineConfig({
                 ui: { itemProps: (item) => ({ label: item?.value ? `${item.value} ${item.label || ""}` : "Stat" }) },
                 fields: [
                   { type: "string", name: "value", label: "Value (e.g. 40%)" },
-                  { type: "string", name: "label", label: "Label" },
-                ],
-              },
-            ],
-          },
-        ],
-      },
-    ],
-  },
+                  { type: "string", name: "label", label: "Label" }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
 });
+export {
+  config_default as default
+};

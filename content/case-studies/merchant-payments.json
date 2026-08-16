@@ -24,5 +24,76 @@
     }
   ],
   "cards": [],
-  "closing": ""
+  "closing": "",
+  "sections": [
+    {
+      "title": "Optimising settlement options",
+      "media": {
+        "image": "/assets/1.png"
+      },
+      "body": "Merchants have the option to request a setting where they can receive each payment instantly in their bank or receive all payments together as a lump sum at the end of the day.\nMost merchants opt for instant payments for obvious reasons. However, this presents two problems - instant transfers are done through IMPS which is not very reliable and incurs additional costs. As a result, merchants are experiencing delayed settlements.\nThrough on-field research, we have discovered that merchants are reluctant to switch to daily settlements due to negative sentiments towards it. They prefer instant payments at any cost.\nTo address the issues of reliability and cost associated with instant transfers, we are introducing \"Instant on NEFT.\" This feature allows for the settlement of each individual payment, but through NEFT which is more reliable.",
+      "stats": [
+        {
+          "value": "2X",
+          "label": "Adaption of Settlement"
+        },
+        {
+          "value": "40%",
+          "label": "Cost Reduction"
+        },
+        {
+          "value": "30%",
+          "label": "More Reliable Transaction"
+        }
+      ]
+    },
+    {
+      "title": "Introducing new profile and settings",
+      "media": {
+        "image": "/assets/2.png"
+      },
+      "body": "We saw a significant increase in support calls regarding daily used settings, which became a point of concern. After digging a bit into it, we realised that settings have become a storage room for all the important and non-important features of the app. There is no particular order or hierarchy of usage, and the grouping is undefined. It becomes difficult for merchants to browse through a long list of settings pages and take the desired actions.\n\nTo address this issue, we first defined groups for each setting, put them into a hierarchy based on their frequency of usage (high to low), and also introduced a profile page that contains all the important business information, actions, and settings."
+    },
+    {
+      "media": {
+        "image": "/assets/3.png"
+      },
+      "body": "Merchants are always interested in finding ways to reach out to more customers and grow their business.\n\nTo enable merchants to track their business performance and grow their business digitally, we have introduced GMB insights - ratings and reviews - and surface them on the G4B app.",
+      "stats": [
+        {
+          "value": "32%",
+          "label": "More retention rate"
+        },
+        {
+          "value": "80%",
+          "label": "Profile action completion"
+        },
+        {
+          "value": "22%",
+          "label": "Reduced Support Calls"
+        }
+      ]
+    },
+    {
+      "title": "Merchant loyalty program",
+      "media": {
+        "image": "/assets/4.png"
+      },
+      "body": "We plan to implement a loyalty program to reward merchants who are loyal to us and encourage them to stay with us."
+    },
+    {
+      "title": "Video Awareness",
+      "media": {
+        "image": "/assets/5.png"
+      },
+      "body": "Launched an initiative to educate merchants about new features and information through video, as our target user group tends to ignore text information most of the time."
+    },
+    {
+      "title": "Ratings from customers [Consumer app]",
+      "media": {
+        "image": "/assets/6.png"
+      },
+      "body": "An initiative to collect ratings and reviews from customers on consumer app."
+    }
+  ]
 }

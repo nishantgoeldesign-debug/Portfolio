@@ -1,0 +1,53 @@
+{
+  "slug": "Starlight",
+  "locked": false,
+  "title": "Starlight - A visual language built from a big bang ",
+  "subtitle": "Defining a Visual Language and System for JioHotstar",
+  "hero": {
+    "src": "/assets/Gpay-Hero.png"
+  },
+  "index": [
+    "A Star is Born",
+    "Story of Starlight",
+    "Principles and Visual Grammar",
+    "Learnings"
+  ],
+  "body": [
+    {
+      "text": "When Jio and Disney+ Hotstar became JioHotstar, something had to be born from that collision. Not a compromise between two old identities. Something new. Something that had never existed before.\nInfinite Possibilities. That was the promise. My job was to make it visible.\n"
+    }
+  ],
+  "sections": [
+    {
+      "title": "It starts with a story, not a spec",
+      "media": {
+        "image": "/assets/Gpay-Hero.png"
+      },
+      "body": "The JioHotstar logo derived from the big bang. A spark that is born with Infinite possibilities in the infinite world of space. I built on it.\nThe visual language has to be atmospheric that leaves behind - the light, the gravity, the glow of things still moving outward. Space isn't empty. It has physics. It has depth. Things in it don't just sit there. They exist.\nThat became Starlight. A metaphor with rules.\n"
+    },
+    {
+      "title": "The hard and most exciting part",
+      "body": "I wasn't alone.\nWhile I was defining the language, other designers were already designing with it. New flows, new design, new product moments- a revamp for this new entity “JioHotstar” - all mid-flight. \nSo It became important to join the force and work in the same direction.My job was to make sure every sentence being written in parallel still made sense.\nThat's the part no one talks about.\nThe messy calibration. The in-progress screen reviews. The conversation about whether things are working together or not across platforms. Things changing everyday with every decision, every review pointing towards if this scale or not with the new designs . It does. It has to. \nIt was very exciting yet challenging to pitch a story that evolves in what we promise for without any compromise. \nA visual language that only works in isolation isn't a system. It's the mood.\nStarlight had to work everywhere - or it didn't work at all.\nOnce we know what we want to be, we then establish the principles that adhere to this metaphor Starlight.\n"
+    },
+    {
+      "title": "Four principles. No exceptions.",
+      "body": "Immersion. Effortlessly blending with the surfaces. The UI isn't a layer on top of content. It is the content.\n\nFocus. What matters glows forward. The rest falls quietly into dark. This is a streaming app. The content is the hero. Design earns its place or disappears.\n\nDepth. Light has a source. Shadow has a reason. Nothing sits flat. The interface has gravity.\n\nEnergy. Everything feels on the verge of motion. Even at rest, Starlight is alive.\n\nThese principles gave life to the visual language that can translate to delightful visual experience. So we didn’t stop here and define meaning to visual grammar.\n"
+    },
+    {
+      "title": "The visual grammar",
+      "body": "Gradient - Unidirectional. Bottom to top. Always. Light rises. That's physics, not preference. \nShadow and light - The source is below. The shadow falls from above. Where your finger touches is where light originates. The interface responds like a physical object would. \nRim light borders and arc - Light from the top edge. Subtle. The difference between a UI element that looks painted on and one that feels like it occupies real space. \nGlow - Color blur used with intent. Glow isn't decoration. It's information. It tells you something is selected, active, alive. \nFour elements. One atmosphere. Every surface in the product - mobile, CTV, illustrations, banners, the office entrance - runs on these same rules. But they also need to be lived in the moment, in motion that flows with each element and complement the atmospheric feel.\n\n"
+    },
+    {
+      "title": "Motion is physics, not animation",
+      "body": "Light lives on the ground. Action makes it rise. Rest lets it settle.\nMotion in Starlight follows three rules:\nIntent - Move only with purpose. Rhythm - Move fast under force, slow without. Delight - Move to be felt.\n"
+    },
+    {
+      "title": "One month. CEO. Investors. Ship it.",
+      "body": "Thirty days. Design done, approved, engineering-handoff-ready.\nThe pitch wasn't just here's what we built. It was here's what this becomes. We showed Starlight applied across every surface today, and how it scales into the future. Leadership wants to see a system with a trajectory, not just a beautiful moment.\nThe story of the big bang wasn't decoration. It was the spine of the entire presentation. Every design decision traced back to it. That coherence was what made the room say yes."
+    },
+    {
+      "title": "What I know now",
+      "body": "Start with a metaphor, not a moodboard. Moodboards collect references. Metaphors generate decisions.\nPrinciples only work as filters. If a principle can't make you say no, it's just a caption.\nShip the system, not just the screens. The edge cases will find you. Build for them first.\nThe story and the design have to be one thing. When they are, you don't need to defend either of them.\nStarlight isn't finished. Visual languages never are. But it gave JioHotstar something it needed at a moment that mattered - a point of view. A way of saying, clearly and visually, that this is something worth watching. And in streaming, that's everything.\n"
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+fragment HomeParts on Home {
+  __typename
+  name
+  tagline
+  work {
+    __typename
+    title
+    role
+    companies
+  }
+  canopyTitle
+  projects {
+    __typename
+    title
+    company
+    preview
+    caseSlug
+  }
+  thoughtsTitle
+  thoughtsNote
+  thoughts {
+    __typename
+    title
+    image
+  }
+  contact {
+    __typename
+    label
+    href
+  }
+}
+
+fragment CaseStudyParts on CaseStudy {
+  __typename
+  slug
+  locked
+  title
+  subtitle
+  hero {
+    __typename
+    src
+    alt
+  }
+  index
+  body {
+    __typename
+    style
+    text
+  }
+  cards {
+    __typename
+    src
+    alt
+  }
+  closing
+  sections {
+    __typename
+    title
+    media {
+      __typename
+      image
+      video
+      alt
+    }
+    body
+    stats {
+      __typename
+      value
+      label
+    }
+  }
+}
