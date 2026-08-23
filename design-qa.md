@@ -1,42 +1,45 @@
-# Locked case study — updated-layout QA
+# Design QA — Thought Garden “Growing Soon” reveal
 
-**Source visual truth**
+## Comparison target
 
-- `/Users/nishantgoel/Downloads/Nishant Goel 4/Case Study/Updated layout.png`
-- Target state: 1440 × 900 desktop, locked case study.
+- Source visual truth: `/Users/nishantgoel/Desktop/Screenshot 2026-08-23 at 1.40.40 PM.png` (1310 × 566 px), plus the supplied transparent-ring and sprout assets.
+- Implementation: browser-rendered homepage at `http://localhost:5173/#home`, captured in the Codex in-app browser (1179 × 1030 px screenshot; browser capture is not persisted as a workspace file).
+- State: desktop hover/focus state for the Thought Garden title; the sprout and “Growing Soon” copy appear beside the title.
+- Density normalization: no scaling comparison was used. The source is a cropped section reference, so QA compares the matching Thought Garden region rather than the entire page canvas.
 
-**Implementation evidence**
+## Findings
 
-- `http://localhost:4187/#case-study`
-- Browser capture: `/private/tmp/updated-locked-case-study.png` (1920 × 1209 physical pixels; browser CSS viewport 1440 × 900 at 0.75 device scale).
-- Comparison image: `/private/tmp/updated-locked-case-study-comparison.png` (reference top, implementation bottom; implementation normalized to the same 1440 × 900 comparison canvas).
+No actionable P0, P1, or P2 differences found in the focused component comparison.
 
-**Primary interactions tested**
+- The implementation uses the supplied replacement sprout beside the title and the exact “Growing Soon” copy from the reference.
+- The sprout and message remain hidden at rest, then appear as a single simple inline reveal on hover or focus.
+- The existing DM Mono title, cream grid background, type scale, and collage layout remain unchanged.
+- The hover affordance also has a focus-visible outline and an accessible label: `Thoughts Garden — Growing Soon`.
 
-- The Home control retains its working `#home` destination.
-- Source assets are loaded: `case-back.svg`, `case-lock.svg`, and `case-study-gpay-hero.png`.
-- The obsolete side image is absent and the case index is positioned independently at the updated right-side location.
-- No browser console errors were recorded.
+## Required fidelity surfaces
 
-**Findings**
+- **Fonts and typography:** The existing DM Mono heading is preserved; “Growing Soon” uses the surrounding DM Sans text styling seen in the reference.
+- **Spacing and layout rhythm:** The sprout and copy sit directly after the heading in one line, without moving the section layout.
+- **Colors and visual tokens:** The supplied muted charcoal ring and organic green/brown sprout contrast appropriately with the existing cream background.
+- **Image quality and asset fidelity:** Both visible assets are the user-supplied PNGs, with no replacement illustration or CSS-drawn substitute.
+- **Copy and content:** The displayed message is exactly “Growing Soon.”
 
-- No actionable P0, P1, or P2 differences remain.
+## Interaction checks
 
-**Required fidelity surfaces**
+- Hover: sprout and “Growing Soon” copy appear beside the heading.
+- Resting state: the sprout and message are hidden.
+- Build: `npx vite build` completed successfully.
+- Browser console: one existing React warning remains elsewhere on the page for an empty image `src`; it is unrelated to this hover interaction.
 
-- Fonts and typography: DM Sans heading/body and DM Mono lock treatment retain the portfolio typography system.
-- Spacing and layout rhythm: title block, supplied hero position, right-side outcome index, body copy, and lock cutoff follow the updated layout.
-- Colors and visual tokens: warm paper canvas, fading grid and body text, pale-gold chips, and navy text match the supplied design.
-- Image quality and asset fidelity: the supplied Google Pay hero and SVG back/lock icons are used directly; no recreated placeholder imagery remains.
-- Copy and content: Home label, merchant title/subtitle, outcome labels, narrative text, and locked state match the requested content.
+## Implementation checklist
 
-**Comparison history**
+- [x] Add the supplied Growing Soon ring and sprout assets.
+- [x] Add hover and focus-triggered inline reveal behavior to Thought Garden.
+- [x] Preserve the existing homepage composition.
+- [x] Verify the production build.
 
-1. Replaced the generated hero with the supplied Google Pay hero, removed the side card, and moved the index beside the hero.
-2. Replaced glyph placeholders with the supplied SVG back and lock assets, and corrected the Home label.
+## Follow-up polish
 
-**Follow-up polish**
-
-- None required for this locked-state layout.
+- [P3] If desired, the inline gap can be fine-tuned after seeing it at additional viewport widths.
 
 final result: passed

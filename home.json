@@ -1,0 +1,62 @@
+{
+  "name": "Nishant Goel",
+  "tagline": "Finding Patterns and Rhythm around the world",
+  "work": {
+    "title": "Work",
+    "role": "Staff Product Designer",
+    "companies": "JioHotstar  /  Disney+"
+  },
+  "canopyTitle": "The Canopy of Work",
+  "projects": [
+    {
+      "title": "Re-imagining Watch Experience on Big Screens",
+      "company": "Disney+",
+      "preview": "/assets/canopy-disney.png",
+      "caseSlug": "watch-experience"
+    },
+    {
+      "title": "Starlight Visual Language and System",
+      "company": "JioHotstar",
+      "preview": "/assets/canopy-starlight.png",
+      "caseSlug": "Starlight"
+    },
+    {
+      "title": "Building Merchant Payment Experience",
+      "company": "Google Pay",
+      "preview": "/assets/canopy-google-pay.png",
+      "caseSlug": "merchant-payments"
+    },
+    {
+      "title": "Scalable Systems and Frameworks",
+      "company": "Disney+ / Dunzo / IDFC",
+      "preview": "/assets/canopy-systems.png",
+      "caseSlug": "Small-Branches"
+    }
+  ],
+  "thoughtsTitle": "Thoughts Garden",
+  "thoughtsNote": "Small notes from a curious practice",
+  "thoughts": [
+    {
+      "title": "Dabbling with AI",
+      "image": "/assets/thought-ai.png"
+    },
+    {
+      "title": "Longevity for mind and body",
+      "image": "/assets/thought-mind-body.png"
+    },
+    {
+      "title": "What Japan taught me",
+      "image": "/assets/thought-japan.png"
+    }
+  ],
+  "contact": [
+    {
+      "label": "Linkedin",
+      "href": "https://www.linkedin.com/in/nishantgoel95"
+    },
+    {
+      "label": "X",
+      "href": "https://x.com/nishantgoel1995"
+    }
+  ]
+}

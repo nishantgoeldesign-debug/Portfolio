@@ -1,0 +1,36 @@
+{
+  "slug": "watch-experience",
+  "locked": true,
+  "title": "Re-imagining Watch Experience on Big Screens",
+  "subtitle": "Leading CTV design for Jiohotstar to enhance viewer experience",
+  "hero": {
+    "src": "/assets/open-case-streaming-hero.png",
+    "alt": "Streaming television interface displayed on a teal design board"
+  },
+  "index": [
+    "The OTT Revolution",
+    "The Perplexing Problem",
+    "Unified Attention Tray (UAT)"
+  ],
+  "body": [
+    {
+      "style": "normal",
+      "text": "Designing for big screens meant rethinking the viewer experience from the living room outward. The goal was to help people discover, choose, and return to the stories they love with greater ease and confidence."
+    },
+    {
+      "style": "fade",
+      "text": "I mapped the television journey across browsing, focused viewing, and quick re-entry moments. The resulting system created a clearer content hierarchy, a more generous viewing canvas, and predictable navigation that worked comfortably from a distance."
+    }
+  ],
+  "cards": [
+    {
+      "src": "/assets/open-case-research-board.png",
+      "alt": "Streaming experience research board"
+    },
+    {
+      "src": "/assets/open-case-research-board.png",
+      "alt": "Streaming experience system board"
+    }
+  ],
+  "closing": "The system gave the product a quieter, more intentional rhythm—keeping content discovery visible while preserving the joy of watching together."
+}
