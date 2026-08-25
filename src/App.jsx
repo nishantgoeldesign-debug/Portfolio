@@ -281,7 +281,19 @@ function CaseStudy({ data }) {
 
         <div className="case-showcase">
           <figure className="case-hero">
-            <img src={hero.src} alt={hero.alt} />
+            {hero.video ? (
+              <video
+                src={hero.video}
+                aria-label={hero.alt || `${title} hero video`}
+                autoPlay
+                loop
+                muted
+                playsInline
+                preload="metadata"
+              />
+            ) : (
+              <img src={hero.src} alt={hero.alt || ""} />
+            )}
           </figure>
           <CaseIndex
             items={index}

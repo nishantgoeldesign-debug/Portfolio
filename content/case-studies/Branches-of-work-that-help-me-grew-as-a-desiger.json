@@ -1,0 +1,36 @@
+{
+  "slug": "Small-Branches",
+  "title": "Branches of work that help me grew as a designer",
+  "subtitle": "Growing different branches of work to learn other aspects of design",
+  "hero": {
+    "src": "/assets/Systems.png"
+  },
+  "body": [
+    {
+      "style": "normal",
+      "text": "A large part of my career is to understand and build in systems. I think of it as car engine where each part is precisely build and assembled together to run a car flawlessly. Across various domains, dealing with different challenges I managed to buid and scale systems as Disney+ / Jiohotstar , Dunzo, IDFC bank across platforms and devices."
+    }
+  ],
+  "sections": [
+    {
+      "title": "Building and Scaling the systems",
+      "media": {
+        "image": "/assets/starlight-hero.png"
+      },
+      "body": "While we transition to Jiohotstar, New doors open for various charters like Interactive games, micro content, Voice search and much more. That demands for updating the architecture and system to adapt and grow keeping every platform in mind. So me and my team positioned ourselves to work with design , Engineering and product to make sure we do so without hampering / delaying in shipping any features along with new Visual language Startlight."
+    },
+    {
+      "media": {
+        "image": "/assets/9.png",
+        "alt": ""
+      },
+      "body": "While working on the checkout experience for Dunzo, I realized how fragmented the experience was considering a system was already established but one was using it. While getting onboarded to the systems team I tried solving for that problem to understand gaps from both Eng and Design POV and build a system that helps both to build a cohesive experience with shipping efficiently leveraging systems."
+    },
+    {
+      "media": {
+        "image": "/assets/8.png"
+      },
+      "body": "IDFC came with the problem of having multiple systems but built and used by different team. While we were re-Imagening the whole banking Experience of IDFC, we tried to bring all the teams to one source of truth by establishing frameworks that applicable across teams. This helped to build with coherence and efficiency. "
+    }
+  ]
+}

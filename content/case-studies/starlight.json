@@ -4,7 +4,8 @@
   "title": "Starlight - A visual language built from a big bang ",
   "subtitle": "Defining a Visual Language and System for JioHotstar",
   "hero": {
-    "src": "/assets/Gpay-Hero.png"
+    "src": "",
+    "video": "http://localhost:5173/assets/Starlight-New.mp4"
   },
   "index": [
     "A Star is Born",
@@ -20,17 +21,17 @@
   "sections": [
     {
       "title": "It starts with a story, not a spec",
-      "media": {
-        "image": "/assets/Gpay-Hero.png"
-      },
-      "body": "The JioHotstar logo derived from the big bang. A spark that is born with Infinite possibilities in the infinite world of space. I built on it.\nThe visual language has to be atmospheric that leaves behind - the light, the gravity, the glow of things still moving outward. Space isn't empty. It has physics. It has depth. Things in it don't just sit there. They exist.\nThat became Starlight. A metaphor with rules.\n"
+      "body": "The JioHotstar logo derived from the big bang. A spark that is born with Infinite possibilities in the infinite world of space. I built on it. The visual language has to be atmospheric that leaves behind - the light, the gravity, the glow of things still moving outward. Space isn't empty. It has physics. It has depth. Things in it don't just sit there. They exist. That became Starlight. A metaphor with rules."
     },
     {
       "title": "The hard and most exciting part",
-      "body": "I wasn't alone.\nWhile I was defining the language, other designers were already designing with it. New flows, new design, new product moments- a revamp for this new entity “JioHotstar” - all mid-flight. \nSo It became important to join the force and work in the same direction.My job was to make sure every sentence being written in parallel still made sense.\nThat's the part no one talks about.\nThe messy calibration. The in-progress screen reviews. The conversation about whether things are working together or not across platforms. Things changing everyday with every decision, every review pointing towards if this scale or not with the new designs . It does. It has to. \nIt was very exciting yet challenging to pitch a story that evolves in what we promise for without any compromise. \nA visual language that only works in isolation isn't a system. It's the mood.\nStarlight had to work everywhere - or it didn't work at all.\nOnce we know what we want to be, we then establish the principles that adhere to this metaphor Starlight.\n"
+      "body": "I wasn't alone. While I was defining the language, other designers were already designing with it. New flows, new design, new product moments- a revamp for this new entity “JioHotstar” - all mid-flight. \nSo It became important to join the force and work in the same direction.My job was to make sure every sentence being written in parallel still made sense.\nThat's the part no one talks about.\nThe messy calibration. The in-progress screen reviews. The conversation about whether things are working together or not across platforms. Things changing everyday with every decision, every review pointing towards if this scale or not with the new designs . It does. It has to. \nIt was very exciting yet challenging to pitch a story that evolves in what we promise for without any compromise. \nA visual language that only works in isolation isn't a system. It's the mood.\nStarlight had to work everywhere - or it didn't work at all.\nOnce we know what we want to be, we then establish the principles that adhere to this metaphor Starlight.\n"
     },
     {
       "title": "Four principles. No exceptions.",
+      "media": {
+        "image": "/assets/Starlightprinciples.png"
+      },
       "body": "Immersion. Effortlessly blending with the surfaces. The UI isn't a layer on top of content. It is the content.\n\nFocus. What matters glows forward. The rest falls quietly into dark. This is a streaming app. The content is the hero. Design earns its place or disappears.\n\nDepth. Light has a source. Shadow has a reason. Nothing sits flat. The interface has gravity.\n\nEnergy. Everything feels on the verge of motion. Even at rest, Starlight is alive.\n\nThese principles gave life to the visual language that can translate to delightful visual experience. So we didn’t stop here and define meaning to visual grammar.\n"
     },
     {
@@ -47,6 +48,10 @@
     },
     {
       "title": "What I know now",
+      "media": {
+        "image": "/assets/starlight-hero.png",
+        "video": ""
+      },
       "body": "Start with a metaphor, not a moodboard. Moodboards collect references. Metaphors generate decisions.\nPrinciples only work as filters. If a principle can't make you say no, it's just a caption.\nShip the system, not just the screens. The edge cases will find you. Build for them first.\nThe story and the design have to be one thing. When they are, you don't need to defend either of them.\nStarlight isn't finished. Visual languages never are. But it gave JioHotstar something it needed at a moment that mattered - a point of view. A way of saying, clearly and visually, that this is something worth watching. And in streaming, that's everything.\n"
     }
   ]
