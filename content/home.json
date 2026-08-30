@@ -38,7 +38,8 @@
   "thoughts": [
     {
       "title": "Dabbling with AI",
-      "image": "/assets/thought-ai.png"
+      "image": "/assets/thought-ai.png",
+      "caseSlug": "AI"
     },
     {
       "title": "Longevity for mind and body",

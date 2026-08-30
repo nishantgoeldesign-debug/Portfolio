@@ -72,6 +72,12 @@ export default defineConfig({
             fields: [
               { type: "string", name: "title", label: "Title" },
               { type: "image", name: "image", label: "Image" },
+              {
+                type: "string",
+                name: "caseSlug",
+                label: "Links to case study (optional)",
+                description: "Add a case study file name from content/case-studies (without .json).",
+              },
             ],
           },
           {

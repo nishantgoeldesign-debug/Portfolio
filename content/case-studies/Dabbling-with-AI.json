@@ -1,0 +1,43 @@
+{
+  "slug": "AI",
+  "title": "Dabbling with AI",
+  "subtitle": "Navigating the Future: My Take on AI Tools in Design",
+  "hero": {
+    "src": "/assets/AI.png"
+  },
+  "body": [
+    {
+      "text": "\nIn a modern landscape where everyone is debating the extent of LLMs, I wanted to share my perspective after spending some time exploring their capabilities. While opinions are mixed, ranging from excitement about the possibilities to uncertainty. I see a great deal of confusion and ambiguity too.\n"
+    },
+    {
+      "style": "normal",
+      "text": "Navigating Ambiguity:\nI began by applying first principles to navigate this space, trying to identify which tasks were redundant and ripe for automation. Providing context and guidelines works well for handling tasks at a basic level, but achieving high-quality, complex outputs is still a challenge. I discovered that as complexity increases, models tend to lose context.\n"
+    }
+  ],
+  "sections": [
+    {
+      "title": " The \"Picasso\" Journey ",
+      "media": {
+        "image": "/assets/Illustration-tool.png",
+        "alt": "picasso"
+      },
+      "body": "Initially, I started by generating in-house illustrations for Disney+ / JioHotstar using guides and principles in collaboration with our visual designer. While feeding in information helped, the output wasn't quite hitting the mark. We needed a better approach.\n\n\nWe realized that AI tools often perform better with structured data, so we started prompting with JSON directly. The output quality improved significantly. To take it further and prevent context loss, we built a custom skill trained on our specific data, guides, and principles, and integrated it as a Figma plugin to optimize our workflow.\n\n\nAfter testing it with the design team and iterating on our JSON structure, styles, and guides, we arrived at \"Picasso\" - our own dedicated illustration generator. We distributed this to several teams, including Design, Product, Marketing, and Brand. By ensuring every illustration adhered to our style and significantly reducing the workload for our visual designer.\n\n\nOnce we secured this win, it opened the floodgates for building further tools, helping us reduce turnaround time (TAT) across different charters.\n"
+    },
+    {
+      "title": "Looking Ahead",
+      "media": {
+        "image": "/assets/Television.png",
+        "alt": "new"
+      },
+      "body": "The next steps are clear, we are replicating this success by building a copy-generation tool and design plugins to handle documentation and mapping foundation tokens, projects that are now core to our team's mission.\n\nThe biggest leap occurred recently when we built \"Television,\" a tool consisting of our components, foundations, and key flows. The idea was to enable the design team to prototype and design directly on interactive surfaces without starting from scratch or to feed in our design language and System.\n\nThis comes with challenges - maintaining an evolving system and ensuring adoption, but it is what we are currently solving for. This extends to designer now building more components and pushing to television library to build more robust system and output. \nAll of it came with a lot of workshops , knowledge sharing within the team. \nWe are moving toward a future where designers can raise PRs directly to our codebase.\n\n"
+    },
+    {
+      "title": "Beyond the Workplace",
+      "media": {
+        "image": "/assets/tool.png",
+        "alt": "https://nishantgoeldesign-debug.github.io/NishantIpod/"
+      },
+      "body": "On a personal note, I still find it fascinating to fiddle with how these tools enable us to build highly personalized apps - whether it's a health tracker, a personal travel directory , or a retro music player. Having that kind of power as a designer opens up a world of potential for creating more tasteful, functional apps and products.\n\nExcited to take them live soon."
+    }
+  ]
+}

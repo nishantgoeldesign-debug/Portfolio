@@ -144,7 +144,7 @@ export function App() {
             <div className="thought-list">
               {(expanded ? home.thoughts : home.thoughts.slice(0, 4)).map((thought, index) => (
                 <a
-                  href="#thoughts"
+                  href={thought.caseSlug ? `#case/${thought.caseSlug}` : "#thoughts"}
                   className={`thought-link${activeThought === index ? " is-active" : ""}`}
                   key={thought.title}
                   onMouseEnter={() => { setActiveThought(index); tick(); }}
