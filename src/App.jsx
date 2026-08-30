@@ -80,12 +80,30 @@ export function App() {
             <img className="identity-coffee" src="/assets/identity-coffee.png" alt="" aria-hidden="true" />
           </div>
           <p>{home.tagline}</p>
+          <div
+            className="top-collage mobile-album"
+            role="group"
+            tabIndex="0"
+            aria-label="Open travel envelope to explore keepsakes"
+            onPointerEnter={() => swoosh()}
+            onFocus={() => swoosh()}
+          >
+            <img className="envelope-item envelope-rain" src="/assets/envelope-rain.png" alt="" />
+            <img className="envelope-item envelope-drink" src="/assets/envelope-drink.png" alt="" />
+            <img className="envelope-item envelope-car" src="/assets/envelope-car.png" alt="" />
+            <img className="envelope-item envelope-racer" src="/assets/envelope-racer.png" alt="" />
+            <img className="envelope-item envelope-fuji" src="/assets/envelope-fuji.png" alt="" />
+            <img className="envelope-item envelope-mountain" src="/assets/envelope-mountain.png" alt="" />
+            <img className="envelope-shell" src="/assets/envelope-blank.png" alt="" />
+            <img className="envelope-resting" src="/assets/envelope-resting.png" alt="" />
+          </div>
         </header>
 
         <section className="work-section" aria-labelledby="work-title">
-          <div>
+          <div className="work-copy">
             <h2 id="work-title">{home.work.title}</h2>
             <p>{home.work.role}</p>
+            <p className="companies">{home.work.companies}</p>
           </div>
           <div
             className="top-collage"
@@ -104,7 +122,6 @@ export function App() {
             <img className="envelope-shell" src="/assets/envelope-blank.png" alt="" />
             <img className="envelope-resting" src="/assets/envelope-resting.png" alt="" />
           </div>
-          <p className="companies">{home.work.companies}</p>
           <div className="brand-stack" aria-hidden="true">
             <img className="brand-group-base" src="/assets/brand-group-highres.png" alt="" />
             <img className="brand-group-motion" src="/assets/brand-group-highres.png" alt="" />
@@ -242,9 +259,10 @@ function CaseStudy({ data }) {
   };
 
   // Locked case studies are teasers: lock scroll so nothing below the landing
-  // view can be reached. Restored when leaving the locked case.
+  // view can be reached on desktop. On a phone the same content needs to be
+  // scrollable rather than scaled down to fit a single viewport.
   useEffect(() => {
-    if (!locked) return;
+    if (!locked || window.matchMedia("(max-width: 640px)").matches) return;
     const root = document.documentElement;
     const body = document.body;
     const prevRoot = root.style.overflow;

@@ -42,10 +42,11 @@ p { margin: 0; color: #696c78; font-size: 19px; letter-spacing: -.4px; line-heig
 .name-play:hover h1, .name-play:focus h1, .name-play.is-active h1 { transform: translateY(2px); }
 @keyframes identity-spin { to { transform: rotate(360deg); } }
 .work-section { position: relative; min-height: 132px; margin-top: 64px; }
-.work-section > div:first-child { position: relative; z-index: 1; }
+.work-copy { position: relative; z-index: 1; }
 .work-section h2 { margin-bottom: 3px; }
-.companies { position: absolute; top: 36px; right: 1px; color: #5d606c; font-size: 16px; letter-spacing: -.6px; }
+.companies { position: absolute; top: 36px; right: 1px; color: #5d606c; font-family: "DM Mono", monospace; font-size: 16px; letter-spacing: -.6px; }
 .top-collage { position: absolute; z-index: 5; width: 182px; height: 177px; top: -164px; right: -4px; cursor: pointer; outline: none; }
+.mobile-album { display: none; }
 .top-collage:focus-visible { outline: 1px solid #30374f; outline-offset: 6px; border-radius: 10px; }
 .envelope-shell { position: absolute; z-index: 10; display: block; width: 100%; height: auto; left: 0; bottom: 0; opacity: 0; filter: brightness(.97) contrast(1.13) saturate(1.12) drop-shadow(-4px 13px 10px rgba(48,48,46,.3)); transition: opacity 200ms ease 100ms; }
 .envelope-resting { position: absolute; z-index: 11; display: block; width: 100%; height: auto; left: 0; bottom: 0; filter: drop-shadow(-3px 11px 9px rgba(48,48,46,.2)); transition: opacity 200ms ease, transform 360ms cubic-bezier(.16, 1, .3, 1); }
@@ -191,3 +192,82 @@ p { margin: 0; color: #696c78; font-size: 19px; letter-spacing: -.4px; line-heig
 .stat { display: flex; flex-direction: column; gap: 6px; text-align: left; }
 .stat-value { font-family: "DM Sans", Arial, sans-serif; font-size: 28px; font-weight: 600; letter-spacing: -.9px; line-height: 1; color: #30374f; }
 .stat-label { font-size: 14px; line-height: 1.3; color: #6c6f7b; }
+
+/* Phone layout: retain the same visual language, but reflow the fixed desktop
+   canvas into a readable single column instead of shrinking it with `zoom`. */
+@media (max-width: 640px) {
+  .page,
+  .case-page {
+    zoom: 1;
+    width: 100%;
+    min-height: 0;
+    padding: 42px 24px 32px;
+    box-shadow: none;
+  }
+
+  .page { --grid-cell: 38px; padding-bottom: 34px; }
+  .page::before { -webkit-mask-image: none; mask-image: none; }
+
+  h1 { font-size: clamp(36px, 11vw, 43px); }
+  h2 { font-size: 23px; }
+  p, .project, .thought-link { font-size: 18px; }
+
+  .identity-ring-frame { width: 218px; top: -68px; }
+  .identity-memoji { width: 60px; left: -48px; bottom: -4px; }
+  .identity-coffee { width: 53px; right: -48px; bottom: -6px; }
+
+  .mobile-album { display: block; position: relative; width: 142px; height: 138px; top: auto; right: auto; margin: 20px 0 0; }
+  .work-section > .top-collage { display: none; }
+  .work-section { min-height: 0; margin-top: 36px; }
+  .companies { position: static; margin-top: 8px; font-size: 14px; white-space: normal; }
+  .brand-stack { position: relative; width: 122px; height: 88px; top: auto; right: auto; margin: 16px 0 0; }
+
+  .canopy { margin-top: 18px; }
+  .project-list { gap: 20px; }
+  .project { display: flex; flex-direction: column; align-items: flex-start; gap: 2px; }
+  .project strong { font-size: 13px; text-align: left; }
+  .project-preview { display: none; }
+
+  .thoughts { min-height: 300px; margin-top: 58px; }
+  .thought-copy { max-width: 100%; gap: 12px; }
+  .bottom-collage { width: min(58vw, 215px); right: auto; left: 0; bottom: 6px; }
+  .thought-copy button { font-size: 16px; }
+
+  .contact { position: static; width: max-content; max-width: 100%; margin: 8px 0 0; transform: none; padding: 10px 17px; font-size: 16px; }
+
+  .case-page { --case-content-width: 100%; --grid-cell: 38px; overflow: visible; }
+  .case-page::before { -webkit-mask-image: none; mask-image: none; }
+  .back-home { min-height: 38px; padding: 0 12px; font-size: 16px; }
+  .case-header, .open-case-header { display: block; min-height: 0; margin-top: 30px; }
+  .case-heading { max-width: none; }
+  .case-heading h1 { max-width: none; font-size: clamp(29px, 8vw, 36px); line-height: 1.17; }
+  .case-heading p { font-size: 17px; }
+  .case-showcase { display: block; }
+  .case-hero { width: 100%; margin-top: 28px; }
+  .case-index { display: flex; gap: 14px; width: 100%; padding-top: 18px; overflow-x: auto; text-align: left; transform: none; scrollbar-width: none; }
+  .case-index::-webkit-scrollbar { display: none; }
+  .case-index a, .case-index a::after { display: inline-block; width: auto; margin: 0; white-space: nowrap; }
+  .case-index a { margin-bottom: 0; }
+  .case-index a::after { margin-left: 7px; }
+  .case-content { margin-top: 28px; }
+  .case-body { width: 100%; min-height: 0; }
+  .case-body p, .open-case-closing, .section-body p { font-size: 16px; }
+  .locked-marker { position: static; width: max-content; margin: 30px auto 0; }
+  .locked-badge { left: 50%; bottom: 18px; transform: translateX(-50%); font-size: 15px; }
+
+  .open-case { min-height: 0; }
+  .open-case-cards { grid-template-columns: 1fr; gap: 28px; width: 100%; }
+  .open-case-closing, .case-sections { width: 100%; }
+  .case-sections { margin-top: 40px; gap: 42px; }
+  .section-title { font-size: 23px; }
+  .stat-box { grid-template-columns: 1fr; gap: 20px; padding: 22px; }
+  .stat { gap: 3px; }
+}
+
+@media (max-width: 380px) {
+  .page, .case-page { padding-left: 20px; padding-right: 20px; }
+  .mobile-album { transform: scale(.9); transform-origin: top left; }
+  .project { gap: 2px; }
+  .project strong { font-size: 12px; }
+  .thoughts { min-height: 290px; }
+}
