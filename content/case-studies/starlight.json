@@ -4,8 +4,8 @@
   "title": "Starlight - A visual language built from a big bang ",
   "subtitle": "Defining a Visual Language and System for JioHotstar",
   "hero": {
-    "src": "",
-    "video": "http://localhost:5173/assets/Starlight-New.mp4"
+    "src": "/assets/Starlight-New.mp4",
+    "video": "/assets/Starlight-New.mp4"
   },
   "index": [
     "A Star is Born",
