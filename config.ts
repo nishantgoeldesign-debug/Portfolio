@@ -59,6 +59,12 @@ export default defineConfig({
                 label: "Links to case study (slug)",
                 description: "Must match a case study file name in content/case-studies (without .json).",
               },
+              {
+                type: "string",
+                name: "externalLink",
+                label: "External link (optional)",
+                description: "If set, opens this project URL in a new tab instead of a case study.",
+              },
             ],
           },
           { type: "string", name: "thoughtsTitle", label: "Thoughts title" },
