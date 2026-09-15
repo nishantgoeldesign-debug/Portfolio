@@ -59,6 +59,12 @@ export default defineConfig({
                 label: "Links to case study (slug)",
                 description: "Must match a case study file name in content/case-studies (without .json).",
               },
+              {
+                type: "string",
+                name: "externalLink",
+                label: "External link (optional)",
+                description: "If set, opens this project URL in a new tab instead of a case study.",
+              },
             ],
           },
           { type: "string", name: "thoughtsTitle", label: "Thoughts title" },
@@ -72,6 +78,12 @@ export default defineConfig({
             fields: [
               { type: "string", name: "title", label: "Title" },
               { type: "image", name: "image", label: "Image" },
+              {
+                type: "string",
+                name: "caseSlug",
+                label: "Links to case study (optional)",
+                description: "Add a case study file name from content/case-studies (without .json).",
+              },
             ],
           },
           {
@@ -106,9 +118,15 @@ export default defineConfig({
           {
             type: "object",
             name: "hero",
-            label: "Hero image",
+            label: "Hero media",
             fields: [
-              { type: "image", name: "src", label: "Image" },
+              { type: "image", name: "src", label: "Image (optional)" },
+              {
+                type: "string",
+                name: "video",
+                label: "Video path (optional)",
+                description: "e.g. /assets/case-study-hero.mp4 — a video takes priority over the image.",
+              },
               { type: "string", name: "alt", label: "Alt text" },
             ],
           },
