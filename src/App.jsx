@@ -133,7 +133,9 @@ export function App() {
           <div className="project-list">
             {home.projects.map((project, index) => (
               <a
-                href={`#case/${project.caseSlug}`}
+                href={project.externalLink?.trim() || (project.caseSlug ? `#case/${project.caseSlug}` : "#")}
+                target={project.externalLink?.trim() ? "_blank" : undefined}
+                rel={project.externalLink?.trim() ? "noreferrer" : undefined}
                 className={`project${activeProject === index ? " is-active" : ""}`}
                 key={project.title}
                 onMouseEnter={() => { setActiveProject(index); tick(); }}

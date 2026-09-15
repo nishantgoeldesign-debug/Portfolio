@@ -82,6 +82,7 @@ p { margin: 0; color: #696c78; font-size: 19px; letter-spacing: -.4px; line-heig
 .preview-1 { top: 62px; }
 .preview-2 { top: 94px; }
 .preview-3 { top: 126px; }
+.preview-4 { top: 158px; width: 190px; }
 @keyframes preview-in {
   0% { opacity: 0; filter: blur(6px) drop-shadow(-4px 7px 8px rgba(47,47,43,.1)); transform: translateY(22px) rotate(-3deg) scale(.88); }
   62% { opacity: 1; filter: blur(0) drop-shadow(-4px 16px 13px rgba(47,47,43,.27)); transform: translateY(-4px) rotate(.65deg) scale(1.025); }
